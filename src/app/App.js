@@ -2,7 +2,9 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
-import AuthPage from '../auth/AuthPage';
+import AuthPage from '../auth/AuthPage.js';
+import SearchPage from '../quotes/SearchPage';
+import FavoritesPage from '../favorites/FavoritesPage';
 
 
 import {
@@ -14,12 +16,26 @@ import {
 import './App.css';
 
 class App extends Component {
+  state = {
+    token: window.localStorage.getItem('TOKEN'),
+    userId: window.localStorage.getItem('USER_ID'),
+    userName: window.localStorage.getItem('USER_NAME')
+  }
+
+  handleUser = user => {
+    window.localStorage.setItem('TOKEN', user.token);
+    window.localStorage.setItem('USER_ID', user.id);
+    window.localStorage.setItem('USER_NAME', user.name);
+    this.setState({ token: user.token });
+  }
 
   render() {
+    const { token, userName } = this.state;
+
     return (
       <div className="App">
         <Router>
-          <Header />
+          <Header userName={userName} />
           <main>
 
             <Switch>
@@ -29,15 +45,25 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/resources" exact={true}
+              <Route path="/Auth" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <AuthPage {...routerProps} onUser={this.handleUser} />
                 )}
               />
 
-              <Route path="/resources/:id"
+              <Route path="/quotes"
                 render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
+                  token
+                    ? <SearchPage {...routerProps} />
+                    : <Redirect to="/auth" />
+                )}
+              />
+
+              <Route path="/favorites"
+                render={routerProps => (
+                  token
+                    ? <FavoritesPage {...routerProps} />
+                    : <Redirect to="/auth" />
                 )}
               />
 
