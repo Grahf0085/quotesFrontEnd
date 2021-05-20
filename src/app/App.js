@@ -2,6 +2,9 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
+import AuthPage from '../auth/AuthPage';
+
+
 import {
   BrowserRouter as Router,
   Route,
@@ -16,13 +19,13 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Header/>
+          <Header />
           <main>
 
             <Switch>
               <Route path="/" exact={true}
                 render={routerProps => (
-                  <Home {...routerProps}/>
+                  <Home {...routerProps} />
                 )}
               />
 
@@ -42,7 +45,7 @@ class App extends Component {
 
             </Switch>
           </main>
-          <Footer/>
+          <Footer />
         </Router>
       </div>
     );
