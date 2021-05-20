@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { signUp, signIn } from '../utils/movies-api.js';
+import { signUp, signIn } from '../app/utils/quotes-api.js';
 import './AuthPage.css';
 
 export default class AuthPage extends Component {
