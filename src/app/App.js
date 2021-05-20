@@ -2,8 +2,8 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
-import AuthPage from '../auth/AuthPage.js';
-import SearchPage from '../quotes/SearchPage';
+import AuthPage from '../Auth/AuthPage.js';
+import SearchPage from '../quotes/QuotePage';
 import FavoritesPage from '../favorites/FavoritesPage';
 
 

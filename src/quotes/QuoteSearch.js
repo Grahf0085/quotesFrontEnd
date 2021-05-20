@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import './SearchPage.css';
 
 export default class SearchPage extends Component {
 
