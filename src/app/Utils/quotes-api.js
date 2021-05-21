@@ -45,7 +45,7 @@ export async function getQuotes(search) {
 //   return response.body;
 // }
 
-export async function getMyQuotes() {
+export async function getMyFavorites() {
   const response = await request
     .get('/api/me/favorites')
     .set('Authorization', window.localStorage.getItem('TOKEN'));
