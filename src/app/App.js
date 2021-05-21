@@ -46,7 +46,7 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/Auth" exact={true}
+              <Route path="/auth" exact={true}
                 render={routerProps => (
                   <AuthPage {...routerProps} onUser={this.handleUser} />
                 )}
