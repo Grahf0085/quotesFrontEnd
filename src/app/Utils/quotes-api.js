@@ -2,7 +2,7 @@ import request from 'superagent';
 
 export async function signUp(credentials) {
   const response = await request
-    .post('/api/auth/signUp')
+    .post('/api/auth/signup')
     // superagent considers 400 errors
     .ok(res => res.status < 500)
     .send(credentials);
@@ -17,7 +17,7 @@ export async function signUp(credentials) {
 
 export async function signIn(credentials) {
   const response = await request
-    .post('/api/auth/signIn')
+    .post('/api/auth/signin')
     .ok(res => res.status < 500)
     .send(credentials);
 
