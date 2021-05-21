@@ -29,7 +29,7 @@ export default class AuthPage extends Component {
 
       onUser(user);
 
-      history.push('/');
+      history.push('/quotes');
     }
     catch (err) {
       this.setState({ error: err.error });
@@ -74,7 +74,7 @@ export default class AuthPage extends Component {
         <p>
           <label>
             <span>Password</span>
-            <input name="email" type="password" required={true}
+            <input name="password" type="password" required={true}
               value={password} onChange={this.handlePasswordChange} />
           </label>
         </p>
