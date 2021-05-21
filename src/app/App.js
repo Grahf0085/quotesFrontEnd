@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
 import AuthPage from '../Auth/AuthPage.js';
-// import SearchPage from '../quotes/QuotePage';
 import FavoritesPage from '../favorites/FavoritesPage';
 import QuotesPage from '../quotes/QuotePage';
 
@@ -52,19 +51,19 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/quotes"
+              <Route path="/quotes" exact={true}
                 render={routerProps => (
                   token
                     ? <QuotesPage {...routerProps} />
-                    : <Redirect to="/auth" />
+                    : <Redirect to="/Auth" />
                 )}
               />
 
-              <Route path="/favorites"
+              <Route path="/favorites" exact={true}
                 render={routerProps => (
                   token
                     ? <FavoritesPage {...routerProps} />
-                    : <Redirect to="/auth" />
+                    : <Redirect to="/Auth" />
                 )}
               />
 
