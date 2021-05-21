@@ -46,13 +46,13 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/Auth" exact={true}
+              <Route path="/auth" exact={true}
                 render={routerProps => (
                   <AuthPage {...routerProps} onUser={this.handleUser} />
                 )}
               />
 
-              <Route path="/quotes"
+              <Route path="/quotes" exact={true}
                 render={routerProps => (
                   token
                     ? <QuotesPage {...routerProps} />
@@ -60,7 +60,7 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/favorites"
+              <Route path="/favorites" exact={true}
                 render={routerProps => (
                   token
                     ? <FavoritesPage {...routerProps} />
