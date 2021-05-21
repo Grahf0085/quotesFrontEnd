@@ -2,7 +2,7 @@ import { Component } from 'react';
 import QuoteList from '../common/QuoteList';
 import QuoteSearch from '../quotes/QuoteSearch';
 import Loader from '../common/Loader';
-import { getQuotes, addFavorite, deleteFavorite, getMyFavorites } from '../app/Utils/quotes-api.js';
+import { getQuotes, addFavorite, deleteFavorite, getMyFavorites } from '../app/utils/quotes-api.js';
 import './QuoteSearch.css';
 
 export default class QuotePage extends Component {

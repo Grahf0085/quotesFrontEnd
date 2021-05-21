@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
 import AuthPage from '../auth/AuthPage.js';
-// import SearchPage from '../quotes/QuotePage';
 import FavoritesPage from '../favorites/FavoritesPage';
 import QuotesPage from '../quotes/QuotePage';
 
@@ -56,7 +55,7 @@ class App extends Component {
                 render={routerProps => (
                   token
                     ? <QuotesPage {...routerProps} />
-                    : <Redirect to="/Auth" />
+                    : <Redirect to="/auth" />
                 )}
               />
 
@@ -64,7 +63,7 @@ class App extends Component {
                 render={routerProps => (
                   token
                     ? <FavoritesPage {...routerProps} />
-                    : <Redirect to="/Auth" />
+                    : <Redirect to="/auth" />
                 )}
               />
 
