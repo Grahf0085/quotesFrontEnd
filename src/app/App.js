@@ -56,7 +56,7 @@ class App extends Component {
                 render={routerProps => (
                   token
                     ? <QuotesPage {...routerProps} />
-                    : <Redirect to="/auth" />
+                    : <Redirect to="/Auth" />
                 )}
               />
 
@@ -64,7 +64,7 @@ class App extends Component {
                 render={routerProps => (
                   token
                     ? <FavoritesPage {...routerProps} />
-                    : <Redirect to="/auth" />
+                    : <Redirect to="/Auth" />
                 )}
               />
 
