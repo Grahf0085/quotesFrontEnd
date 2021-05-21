@@ -10,8 +10,8 @@ class QuoteList extends Component {
 
     return (
       <ul className="QuoteList">
-        {quotes.map(quote => (
-          <QuoteItem key={quote.quoteId} quote={quote} onFavorited={onFavorited} />
+        {quotes.map((quote, i) => (
+          <QuoteItem key={`${quote.quoteId} ${i}`} quote={quote} onFavorited={onFavorited} />
         ))}
       </ul>
     );

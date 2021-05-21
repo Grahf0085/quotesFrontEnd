@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './QuoteDetailPage.css';
-import { getQuote } from '../app/Utils/quotes-api';
+import { getQuote } from '../app/utils/quotes-api';
 
 export default class QuoteDetailPage extends Component {
   state = {

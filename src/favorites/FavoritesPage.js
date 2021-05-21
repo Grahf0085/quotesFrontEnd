@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import QuoteList from '../common/QuoteList';
 import Loader from '../common/Loader';
-import { getMyFavorites, addFavorite, deleteFavorite } from '../app/Utils/quotes-api.js';
+import { getMyFavorites, addFavorite, deleteFavorite } from '../app/utils/quotes-api.js';
 import './FavoritesPage.css';
 
 export default class FavoritesPage extends Component {
