@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './QuoteDetailPage.css';
+import { getQuote } from '../app/Utils/quotes-api';
 
 export default class QuoteDetailPage extends Component {
   state = {
@@ -24,6 +25,9 @@ export default class QuoteDetailPage extends Component {
   }
 
   render() {
+
+    const { quote } = this.state;
+
     return (
       <section className="QuoteDetailPage">
         <pre>

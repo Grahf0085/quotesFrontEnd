@@ -1,3 +1,7 @@
 .Home {
-  
+  text-align: center;
+}
+
+.Home > * {
+  margin: 20px;
 }
