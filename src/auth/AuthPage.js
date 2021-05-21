@@ -24,7 +24,7 @@ export default class AuthPage extends Component {
     this.setState({ error: '' });
 
     try {
-      const action = isSignUp ? (await signUp(this.state)) : (await signIn(this.state));
+      const action = isSignUp ? signUp : signIn;
       const user = await action(this.state);
 
       onUser(user);
